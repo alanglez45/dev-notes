@@ -4,9 +4,9 @@ This is a personal study-notes repo. It contains **only Markdown files** — no 
 
 ## Navigation
 
-- `index.md` at the root is the table of contents — start here to find any topic
-- Each top-level directory is a topic area (JavaScript, TypeScript, React, Redux, Zustand, NextJS, Docker, BackendNotes)
-- Topic directories each have their own `index.md` entry point
+- `index.md` at the root lists the three categories and links to each one's index
+- Each category has its own `index.md`: `frontend/index.md`, `backend/index.md`, `infra/index.md`
+- Topic directories each have their own `index.md` entry point inside their category folder
 
 ## Content conventions
 
