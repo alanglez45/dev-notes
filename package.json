@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "pdf": "node scripts/md-to-pdf.mjs --all",
+    "pdf:folder": "node scripts/md-to-pdf.mjs --folder"
+  },
+  "dependencies": {
+    "marked": "^18.0.6",
+    "puppeteer": "^25.3.0",
+    "shiki": "^4.3.1"
+  }
+}
