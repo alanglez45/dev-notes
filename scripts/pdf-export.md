@@ -7,7 +7,7 @@ Export markdown notes to PDF using Puppeteer.
 | Command | Description |
 |---|---|
 | `npm run pdf` | Export all topics as individual PDFs |
-| `npm run pdf:folder -- frontend/React` | Export all `.md` from a specific folder |
+| `npm run pdf:folder -- notes/frontend/React` | Export all `.md` from a specific folder |
 
 ## Manual Usage
 
@@ -16,10 +16,10 @@ Export markdown notes to PDF using Puppeteer.
 node scripts/md-to-pdf.mjs --all
 
 # Specific folder
-node scripts/md-to-pdf.mjs --folder frontend/React
+node scripts/md-to-pdf.mjs --folder notes/frontend/React
 
 # Single file
-node scripts/md-to-pdf.mjs frontend/React/01-fundamentals.md
+node scripts/md-to-pdf.mjs notes/frontend/React/01-fundamentals.md
 
 # Multiple files
 node scripts/md-to-pdf.mjs file1.md file2.md

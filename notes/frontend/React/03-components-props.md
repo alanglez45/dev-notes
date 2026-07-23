@@ -160,7 +160,11 @@ Using array index as key causes bugs when:
 
 ### Props Drilling
 
-Passing data through multiple component layers even when some don't need it. Avoid with:
+Passing data through multiple component layers even when some don't need it.
+
+See [Lifting State Up](03a-lifting-state-up.md) — sharing state by moving it to the closest common parent.
+
+If lifting becomes impractical (3+ levels deep), then use:
 - **Context API** — global state without prop drilling
 - **State Management Libraries** (Redux, Zustand, etc.)
 

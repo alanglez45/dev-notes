@@ -4,15 +4,16 @@ This is a personal study-notes repo. It contains **only Markdown files** — no 
 
 ## Navigation
 
-- `index.md` at the root lists the three categories and links to each one's index
-- Each category has its own `index.md`: `frontend/index.md`, `backend/index.md`, `infra/index.md`
-- Topic directories each have their own `index.md` entry point inside their category folder
+- `index.md` at the root lists all categories and links to each one's index
+- All categories live inside `notes/`: `notes/frontend/`, `notes/backend/`, `notes/infra/`, `notes/genai/`, `notes/opencode/`
+- Each category has its own `index.md` entry point
+- Topic directories each have their own `index.md` inside their category folder
 
 ## Content conventions
 
 - Some sections are in Spanish (NextJS, Docker, some BackendNotes) — agents should read and write in whichever language fits the existing file
-- No package.json, no lockfiles, no CI, no task runners
-- No tests, no linters, no formatters — nothing to run
+- Has a `package.json` with dependencies for PDF generation (marked, shiki, puppeteer)
+- Scripts in `scripts/` for converting notes to PDF
 
 ## Constraints
 

@@ -4,6 +4,7 @@
 - [Fundamentals](01-fundamentals.md) - React, SPA, Virtual DOM, React Element
 - [JSX](02-jsx.md) - Syntax rules, conditional rendering, lists
 - [Components & Props](03-components-props.md) - Types, props, children, PropTypes
+- [Lifting State Up](03a-lifting-state-up.md) - Shared state between siblings, single source of truth
 - [Styling](04-styling.md) - CSS imports, modules, className, dynamic styles, Tailwind
 - [Security](05-security.md) - XSS prevention, dangerouslySetInnerHTML
 

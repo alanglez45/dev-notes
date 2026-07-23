@@ -4,6 +4,8 @@
 
 Context provides a way to pass data through the component tree without having to pass props manually at every level. It solves the **prop drilling** problem — when you need to pass data through many intermediate components that don't use it.
 
+> [Lifting State Up](03a-lifting-state-up.md) — sharing state by moving it to the closest common parent.
+
 ```
 // Without Context: prop drilling
 App (theme="dark")

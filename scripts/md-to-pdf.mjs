@@ -10,7 +10,7 @@ import puppeteer from 'puppeteer';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUTPUT_DIR = join(ROOT, 'output');
-const CATEGORIES = ['frontend', 'backend', 'infra'];
+const CATEGORIES = ['frontend', 'backend', 'infra', 'genai', 'opencode'];
 
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -350,7 +350,7 @@ async function main() {
     let totalPdfs = 0;
 
     for (const category of CATEGORIES) {
-      const categoryDir = join(ROOT, category);
+      const categoryDir = join(ROOT, 'notes', category);
       if (!existsSync(categoryDir)) continue;
 
       const topicDirs = getTopicDirs(categoryDir);
@@ -410,10 +410,10 @@ async function main() {
   // Mode 3: Individual file(s)
   if (args.length === 0) {
     console.log('Usage:');
-    console.log('  node scripts/md-to-pdf.mjs --all                          # All topics as individual PDFs');
-    console.log('  node scripts/md-to-pdf.mjs --folder frontend/React        # All .md from folder');
-    console.log('  node scripts/md-to-pdf.mjs frontend/React/01-fundamentals.md  # Single file');
-    console.log('  node scripts/md-to-pdf.mjs file1.md file2.md              # Multiple files');
+    console.log('  node scripts/md-to-pdf.mjs --all                              # All topics as individual PDFs');
+    console.log('  node scripts/md-to-pdf.mjs --folder notes/frontend/React     # All .md from folder');
+    console.log('  node scripts/md-to-pdf.mjs notes/frontend/React/01-fundamentals.md  # Single file');
+    console.log('  node scripts/md-to-pdf.mjs file1.md file2.md                # Multiple files');
     await highlighter.dispose();
     return;
   }

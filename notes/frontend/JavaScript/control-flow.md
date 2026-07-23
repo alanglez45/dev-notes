@@ -111,6 +111,9 @@ const person = {
 for (const key in person) {
     console.log(key, person[key]);
 }
+// name Juan
+// age 30
+// city Madrid
 ```
 
 Notes:
@@ -121,6 +124,10 @@ const tasks = ['Task', 'Eat', 'Project', 'Study JavaScript'];
 for (let task in tasks) {
     console.log(task);
 }
+// 0
+// 1
+// 2
+// 3
 ```
 
 ### for...of
@@ -131,6 +138,10 @@ const tasks = ['Task', 'Eat', 'Project', 'Study JavaScript'];
 for (let task of tasks) {
     console.log(task);
 }
+// Task
+// Eat
+// Project
+// Study JavaScript
 ```
 
 Notes:
@@ -145,6 +156,9 @@ const person = {
 for (const [key, value] of Object.entries(person)) {
     console.log(key, value);
 }
+// name Juan
+// age 30
+// city Madrid
 ```
 
 ### map()
@@ -167,6 +181,9 @@ const fruits = ['apple', 'banana', 'orange'];
 fruits.forEach((fruit, index) => {
     console.log(index, fruit);
 });
+// 0 apple
+// 1 banana
+// 2 orange
 ```
 
 Notes:
