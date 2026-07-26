@@ -5,7 +5,8 @@ This is a personal study-notes repo. It contains **only Markdown files** — no 
 ## Navigation
 
 - `index.md` at the root lists all categories and links to each one's index
-- All categories live inside `notes/`: `notes/frontend/`, `notes/backend/`, `notes/infra/`, `notes/genai/`, `notes/opencode/`
+- All categories live inside `notes/`: `notes/frontend/`, `notes/backend/`, `notes/infra/`, `notes/genai/`, `notes/opencode/`, `notes/interviews/`
+- Git guide lives at `notes/git/index.md`
 - Each category has its own `index.md` entry point
 - Topic directories each have their own `index.md` inside their category folder
 
