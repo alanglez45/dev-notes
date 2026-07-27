@@ -10,7 +10,7 @@ import puppeteer from 'puppeteer';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUTPUT_DIR = join(ROOT, 'output');
-const CATEGORIES = ['frontend', 'backend', 'infra', 'genai', 'opencode'];
+const CATEGORIES = ['frontend', 'backend', 'infra', 'genai', 'opencode', 'git', 'interviews'];
 
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -105,25 +105,84 @@ const CSS = `
 
   table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+      border-spacing: 0;
+
     margin: 12px 0;
     font-size: 13px;
     page-break-inside: avoid;
   }
 
   th, td {
-    border: 1px solid #d1d5db;
     padding: 8px 12px;
     text-align: left;
   }
 
   th {
-    background: #f9fafb;
+    background: #213547;
+    color: #fff;
     font-weight: 600;
-    color: #374151;
   }
 
-  tr:nth-child(even) { background: #f9fafb; }
+  tr:nth-child(even) { background: #e5e7eb; }
+
+  tbody td:first-child {
+    border-left: 1px solid #DADEE1;
+  }
+
+  /* Borde derecho */
+    tbody td:last-child {
+    border-right: 1px solid #DADEE1;
+  }
+
+  /* Borde inferior */
+  tbody tr:last-child td {
+    border-bottom: 1px solid #DADEE1;
+  }
+
+  /* Bordes laterales */
+    tbody td:first-child {
+    border-left: 1px solid #DADEE1;
+  }
+
+  tbody td:last-child {
+    border-right: 1px solid #DADEE1;
+  }
+
+  /* Borde inferior */
+  tbody tr:last-child td {
+    border-bottom: 1px solid #DADEE1;
+  }
+
+  thead th:first-child {
+    border-left: 1px solid #DADEE1;
+    border-top-left-radius: 8px;
+  }
+
+  thead th:last-child {
+    border-right: 1px solid #DADEE1;
+    border-top-right-radius: 8px;
+  }
+
+  tbody td:first-child {
+    border-left: 1px solid #DADEE1;
+  }
+
+  tbody td:last-child {
+    border-right: 1px solid #DADEE1;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 1px solid #DADEE1;
+  }
+
+  tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+  }
+
+  tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+  }
 
   blockquote {
     border-left: 4px solid #3b82f6;
@@ -376,6 +435,23 @@ async function main() {
         const outputPath = join(OUTPUT_DIR, `${topic}.pdf`);
         await generatePdf(fullHtml, outputPath);
         totalPdfs++;
+      }
+
+      if (topicDirs.length === 0) {
+        const files = getMdFiles(categoryDir);
+        if (files.length > 0) {
+          const sections = files.map(f => {
+            const filePath = join(categoryDir, f);
+            const title = basename(f, '.md');
+            const html = mdToHtml(filePath);
+            return { title, html };
+          });
+
+          const fullHtml = buildHtml(sections, category);
+          const outputPath = join(OUTPUT_DIR, `${category}.pdf`);
+          await generatePdf(fullHtml, outputPath);
+          totalPdfs++;
+        }
       }
     }
 
