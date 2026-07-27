@@ -21,18 +21,18 @@ const CSS = `
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 14px;
     line-height: 1.7;
-    color: #1a1a1a;
+    color: #212529;
     padding: 40px 50px;
     max-width: 900px;
     margin: 0 auto;
   }
 
-  h1 { font-size: 28px; font-weight: 700; margin: 32px 0 16px; color: #111; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; }
-  h2 { font-size: 22px; font-weight: 600; margin: 28px 0 12px; color: #1f2937; }
-  h3 { font-size: 18px; font-weight: 600; margin: 24px 0 8px; color: #374151; }
-  h4 { font-size: 15px; font-weight: 600; margin: 20px 0 8px; color: #4b5563; }
+  h1 { font-size: 28px; font-weight: 700; margin: 32px 0 5px 0; color: #212529; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; }
+  h2 { font-size: 22px; font-weight: 600; margin: 10px 0 5px 0; color: #2a64c5; }
+  h3 { font-size: 18px; font-weight: 600; margin: 10px 0 8px; color: #F37748; }
+  h4 { font-size: 15px; font-weight: 600; margin: 20px 0 8px; color: #3e8e91; }
 
-  p { margin: 8px 0; }
+  p { margin: 4px 0; }
 
   a { color: #2563eb; text-decoration: none; }
   a:hover { text-decoration: underline; }
@@ -68,7 +68,9 @@ const CSS = `
     justify-content: space-between;
     padding: 6px 14px;
     background: #DADEE1;
+    background: #e5e7eb;
     border-bottom: 1px solid #DADEE1;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .code-lang {
@@ -152,6 +154,7 @@ const CSS = `
   .file-separator {
     page-break-before: always;
     border-top: 3px solid #3b82f6;
+    border-top: 3px solid #FDCA40;
     padding-top: 20px;
     margin-top: 0;
   }
