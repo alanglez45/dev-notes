@@ -20,3 +20,7 @@
 ## Asking Questions
 
 - [Questions to Ask](12-questions-to-ask.md) - Work schedule and general questions to ask the interviewer
+
+## CV
+
+- [CV - Guía ATS](cv/index.md) - Cómo crear un CV optimizado para ATS

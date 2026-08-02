@@ -258,7 +258,7 @@ let highlighter;
 
 async function initHighlighter() {
   highlighter = await createHighlighter({
-    themes: ['github-light'],
+    themes: ['one-light'],
     langs: [
       'javascript', 'typescript', 'jsx', 'tsx',
       'html', 'css', 'json', 'bash', 'shell',
@@ -279,12 +279,12 @@ function highlightCode(code, lang) {
   try {
     return highlighter.codeToHtml(code, {
       lang: resolvedLang,
-      theme: 'github-light',
+      theme: 'one-light',
     });
   } catch {
     return highlighter.codeToHtml(code, {
       lang: 'text',
-      theme: 'github-light',
+      theme: 'one-light',
     });
   }
 }
